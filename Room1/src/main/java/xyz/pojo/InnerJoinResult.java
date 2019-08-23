@@ -13,7 +13,15 @@ public class InnerJoinResult {
     @ColumnInfo(name="dep_id")
     private int depId;
 
+    private String dept;
 
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
 
     public int getDepId() {
         return depId;

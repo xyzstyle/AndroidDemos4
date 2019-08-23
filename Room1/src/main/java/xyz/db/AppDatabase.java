@@ -13,7 +13,7 @@ import xyz.pojo.User;
  * Created by xyz on 2019/8/12.
  * Project Name:AndroidDemos4
  */
-@Database(entities = {User.class, Employee.class, Department.class}, version =11)
+@Database(entities = {User.class, Employee.class, Department.class}, version =15)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();

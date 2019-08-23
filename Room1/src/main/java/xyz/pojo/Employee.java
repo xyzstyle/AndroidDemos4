@@ -13,7 +13,8 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
  * Created by xyz on 2019/8/12.
  * Project Name:AndroidDemos4
  */
-@Entity(tableName = "employee",foreignKeys = @ForeignKey(entity = Department.class, parentColumns = "id", childColumns = "dep_id", onDelete = CASCADE))
+@Entity(tableName = "employee", foreignKeys = @ForeignKey(entity = Department.class, parentColumns = "id", childColumns = "dep_id", onDelete = CASCADE),
+        indices = @Index(value = {"dep_id"}))
 public class Employee {
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -26,18 +27,12 @@ public class Employee {
     private int depId;
 
 
-
-
-
-
-
-
-    public Employee(String name, int age, String address, double salary,int depId) {
+    public Employee(String name, int age, String address, double salary, int depId) {
         this.name = name;
         this.age = age;
         this.address = address;
         this.salary = salary;
-        this.depId=depId;
+        this.depId = depId;
     }
 
     public int getId() {

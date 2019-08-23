@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
         List<Department> departments = new ArrayList<>();
         Department department = new Department("IT Billing");
         departments.add(department);
-        department = new Department("Engineerin");
+        department = new Department("Engineer DP");
         departments.add(department);
-        department = new Department("Finance");
+        department = new Department("Finance DP");
         departments.add(department);
 
         AppDatabase db = AppDatabase.getInstance();
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         List<InnerJoinResult> companies = db.employeeDao().getDepartmentFromCompany();
         Log.d("xyz","InnerJoinResult----->" + companies.size());
         for (InnerJoinResult result : companies) {
-            Log.d("xyz","result--->" + result.getDepId() + " " + result.getName() + " " );
+            Log.d("xyz","result--->" + result.getName() + " " +  result.getDepId()+ " "+result.getDept() );
 
         }
     }

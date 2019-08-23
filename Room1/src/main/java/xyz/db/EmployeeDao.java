@@ -19,7 +19,7 @@ public interface EmployeeDao {
     @Query("SELECT * FROM employee")
     List<Employee> getAllCompany();
 
-    @Query("SELECT  name,dep_id  from employee INNER JOIN department ON Employee.dep_id=Department.id  Where Department.id=1")
+    @Query("SELECT  name,dep_id,dept  from employee INNER JOIN department ON Employee.dep_id=Department.id  Where Department.id=2")
     List<InnerJoinResult> getDepartmentFromCompany();
 
     @Insert

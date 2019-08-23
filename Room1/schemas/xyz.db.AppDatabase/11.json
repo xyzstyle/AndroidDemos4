@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 11,
-    "identityHash": "2221c2c58f89fba2d66218e17d1f10a6",
+    "identityHash": "78eaf7375894a275b8dbd3b7a6a38d75",
     "entities": [
       {
         "tableName": "User",
@@ -101,7 +101,16 @@
           ],
           "autoGenerate": true
         },
-        "indices": [],
+        "indices": [
+          {
+            "name": "index_employee_dep_id",
+            "unique": true,
+            "columnNames": [
+              "dep_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_employee_dep_id` ON `${TABLE_NAME}` (`dep_id`)"
+          }
+        ],
         "foreignKeys": [
           {
             "table": "Department",
@@ -145,7 +154,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2221c2c58f89fba2d66218e17d1f10a6\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"78eaf7375894a275b8dbd3b7a6a38d75\")"
     ]
   }
 }
