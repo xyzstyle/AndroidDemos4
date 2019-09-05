@@ -1,1 +1,1 @@
-include ':app', ':Toolbar1', ':Room1', ':Room2', ':RecyclerView1', ':LiveData1', ':ViewModel1', ':Lifecycle1', ':LiveData2', ':LiveData3', ':Toolbar2', ':Toolbar3'
+include ':app', ':Toolbar1', ':Room1', ':Room2', ':RecyclerView1', ':LiveData1', ':ViewModel1', ':Lifecycle1', ':LiveData2', ':LiveData3', ':Toolbar2', ':Toolbar3', ':NavigationDrawer1', ':NavigationDrawer2'

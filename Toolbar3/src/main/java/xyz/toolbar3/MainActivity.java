@@ -12,10 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.zhihu_toolbar_menu);
-
         toolbar.setNavigationIcon(R.mipmap.ic_drawer_home);
-
         toolbar.setTitle(R.string.home_page);
-        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+        //toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
     }
 }
