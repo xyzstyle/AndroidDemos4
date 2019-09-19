@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/title"
+        app:subtitle="@string/sub_title"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white"
+        app:logo="@mipmap/ic_launcher"
+        app:navigationIcon="@drawable/bs_ic_more"
+        android:theme="@style/ToolBarTheme"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T1"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T2"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_weight="1"
+      />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/title"
+        app:subtitle="@string/sub_title"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white"
+        app:logo="@mipmap/ic_launcher"
+        app:navigationIcon="@drawable/bs_ic_more"
+        android:theme="@style/ToolBarTheme1"
+        app:popupTheme="@style/OverflowMenuStyle"
+        android:background="@color/colorPrimaryDark"/>
+</LinearLayout>
