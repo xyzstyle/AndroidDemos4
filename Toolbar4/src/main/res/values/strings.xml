@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Toolbar4</string>
+    <string name="title">Title</string>
+    <string name="sub_title">Sub Title</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_sync">Sync</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_about">About</string>
+</resources>
