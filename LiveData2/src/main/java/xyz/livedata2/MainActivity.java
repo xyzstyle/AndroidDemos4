@@ -1,5 +1,6 @@
 package xyz.livedata2;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "MainActivity:xyz";
     private MutableLiveData<Integer> mNumberLiveData;
+    private LiveData<Integer> mLiveData;
     private TextView mTvNumber;
 
     @Override
