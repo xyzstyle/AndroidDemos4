@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnStart = findViewById(R.id.btn_start);
         btnStart.setOnClickListener(this);
         mNumberLiveData = new MutableLiveData<>();
+        Log.d(TAG, "onCreate  NumberLiveData: "+mNumberLiveData);
         mNumberLiveData.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@Nullable Integer integer) {

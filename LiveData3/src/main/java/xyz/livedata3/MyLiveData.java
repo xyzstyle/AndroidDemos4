@@ -16,17 +16,11 @@ import java.lang.ref.WeakReference;
  */
 public class MyLiveData extends LiveData<Integer> {
     private static final String TAG = "xyz:MyLiveData";
-    private static MyLiveData sData;
+
     private WeakReference<Context> mContextWeakReference;
 
-    static MyLiveData getInstance(Context context) {
-        if (sData == null) {
-            sData = new MyLiveData(context);
-        }
-        return sData;
-    }
 
-    private MyLiveData(Context context) {
+    MyLiveData(Context context) {
         mContextWeakReference = new WeakReference<>(context);
     }
 
@@ -64,7 +58,7 @@ public class MyLiveData extends LiveData<Integer> {
                 WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 if (wifiManager != null) {
                     int wifiState = wifiManager.getWifiState();
-                    sData.setValue(wifiState);
+                    MyLiveData.this.setValue(wifiState);
                 }
             }
         }

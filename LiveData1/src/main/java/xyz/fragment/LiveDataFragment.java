@@ -26,7 +26,7 @@ import xyz.model.NameViewModel;
  */
 public class LiveDataFragment extends Fragment {
 
-    private static final String TAG = "LiveDataFragment";
+    private static final String TAG = "xyz:LiveDataFragment";
     private NameViewModel mNameViewModel;
     @BindView(R.id.tv_name)
     TextView mTvName;
@@ -39,6 +39,7 @@ public class LiveDataFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mNameViewModel = ViewModelProviders.of(this).get(NameViewModel.class);
+        Log.d(TAG, "onCreate: "+mNameViewModel);
 //        mNameViewModel.getCurrentName().observe(this, (String name) -> {
 //            mTvName.setText(name);
 //            Log.d(TAG, "currentName: " + name);
